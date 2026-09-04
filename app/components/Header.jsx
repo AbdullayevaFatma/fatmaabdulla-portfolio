@@ -34,9 +34,9 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
         <a
           href="#contact"
-          className="px-8 py-3 border rounded-full border-white flex items-center gap-2 bg-black text-white hover:bg-gray-800 transition"
+          className="px-8 py-3 border rounded-full border-white flex items-center gap-2 bg-black text-white hover:bg-gray-800 transition dark:bg-transparent"
         >
-          Contact me
+          contact me
           <Image
             src={assets.right_arrow_white}
             alt="right arrow"
@@ -47,9 +47,9 @@ const Header = () => {
         <a
           href="/sample-resume.pdf"
           download
-          className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+          className="px-8 py-3 border rounded-full border-gray-500 flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800 transition bg-white dark:text-black"
         >
-          My resume
+          my resume
           <Image src={assets.download_icon} alt="download" className="w-4" />
         </a>
       </div>
