@@ -1,9 +1,12 @@
+"use client"
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
+import { useTheme } from "../context/ThemeContext";
 
-const Work = ({ isDarkMode }) => {
+const Work = () => {
+  const { isDarkMode } = useTheme();
   return (
     <motion.div
       id="work"

@@ -1,10 +1,14 @@
+"use client"
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
-const Navbar = ({isDarkMode, setIsDarkMode}) => {
+const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
+  const { isDarkMode, toggleTheme } = useTheme();
+
   const openMenu = () => {
     sideMenuRef.current.style.transform = "translateX(-16rem)";
   };
@@ -68,7 +72,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         </ul>
         <div className="flex items-center gap-4">
           <button>
-            <Image src={isDarkMode ?  assets.sun_icon : assets.moon_icon} alt="moon icon" className="w-6" onClick={()=>setIsDarkMode(!isDarkMode)} />
+            <Image src={isDarkMode ?  assets.sun_icon : assets.moon_icon} alt="moon icon" className="w-6" onClick={toggleTheme} />
           </button>
           <a
             href="#contact"
